@@ -13,6 +13,10 @@
 		ECF37D362A6213A200B2D13B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF37D342A6213A200B2D13B /* Main.storyboard */; };
 		ECF37D382A6213A300B2D13B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECF37D372A6213A300B2D13B /* Assets.xcassets */; };
 		ECF37D3B2A6213A300B2D13B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECF37D392A6213A300B2D13B /* LaunchScreen.storyboard */; };
+		ECF37D442A62158500B2D13B /* CatsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF37D432A62158500B2D13B /* CatsCollectionViewController.swift */; };
+		ECF37D472A6217C900B2D13B /* CatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF37D462A6217C900B2D13B /* CatCell.swift */; };
+		ECF37D4A2A6218C100B2D13B /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF37D492A6218C100B2D13B /* Protocols.swift */; };
+		ECF37D4C2A62198800B2D13B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF37D4B2A62198800B2D13B /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		ECF37D372A6213A300B2D13B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECF37D3A2A6213A300B2D13B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECF37D3C2A6213A300B2D13B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECF37D432A62158500B2D13B /* CatsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsCollectionViewController.swift; sourceTree = "<group>"; };
+		ECF37D462A6217C900B2D13B /* CatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCell.swift; sourceTree = "<group>"; };
+		ECF37D492A6218C100B2D13B /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		ECF37D4B2A62198800B2D13B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,9 @@
 		ECF37D2D2A6213A200B2D13B /* ImgurAPI */ = {
 			isa = PBXGroup;
 			children = (
+				ECF37D482A6218B800B2D13B /* Utils */,
+				ECF37D452A62179800B2D13B /* Views */,
+				ECF37D422A62155D00B2D13B /* Controllers */,
 				ECF37D2E2A6213A200B2D13B /* AppDelegate.swift */,
 				ECF37D302A6213A200B2D13B /* SceneDelegate.swift */,
 				ECF37D322A6213A200B2D13B /* ViewController.swift */,
@@ -65,6 +76,31 @@
 				ECF37D3C2A6213A300B2D13B /* Info.plist */,
 			);
 			path = ImgurAPI;
+			sourceTree = "<group>";
+		};
+		ECF37D422A62155D00B2D13B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				ECF37D432A62158500B2D13B /* CatsCollectionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ECF37D452A62179800B2D13B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ECF37D462A6217C900B2D13B /* CatCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ECF37D482A6218B800B2D13B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ECF37D492A6218C100B2D13B /* Protocols.swift */,
+				ECF37D4B2A62198800B2D13B /* Extensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +177,10 @@
 				ECF37D332A6213A200B2D13B /* ViewController.swift in Sources */,
 				ECF37D2F2A6213A200B2D13B /* AppDelegate.swift in Sources */,
 				ECF37D312A6213A200B2D13B /* SceneDelegate.swift in Sources */,
+				ECF37D4A2A6218C100B2D13B /* Protocols.swift in Sources */,
+				ECF37D472A6217C900B2D13B /* CatCell.swift in Sources */,
+				ECF37D442A62158500B2D13B /* CatsCollectionViewController.swift in Sources */,
+				ECF37D4C2A62198800B2D13B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
