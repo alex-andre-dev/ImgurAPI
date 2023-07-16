@@ -10,17 +10,38 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class CatsCollectionViewController: UICollectionViewController {
-
+    
+    //MARK: - ViewModel
+    private var viewModel: CatsCollectionViewModel
+    
+    
+    //MARK: - Initializers
+    init(collectionViewLayout layout: UICollectionViewLayout, viewModel: CatsCollectionViewModel) {
+        self.viewModel = viewModel
+        super.init(collectionViewLayout: layout)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         collectionView.register(CatCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
+        fetchCatMedias()
     }
-
+    //MARK: - Helpers
+    
+    private func fetchCatMedias() {
+        viewModel.fetchData { [weak self] in
+            DispatchQueue.main.async {
+                self?.collectionView.backgroundColor = .red
+                print("foi")
+            }
+        }
+    }
 
     //MARK: - UICollectionViewDataSource
 

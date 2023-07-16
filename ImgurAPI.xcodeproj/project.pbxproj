@@ -17,6 +17,9 @@
 		ECF37D472A6217C900B2D13B /* CatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF37D462A6217C900B2D13B /* CatCell.swift */; };
 		ECF37D4A2A6218C100B2D13B /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF37D492A6218C100B2D13B /* Protocols.swift */; };
 		ECF37D4C2A62198800B2D13B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF37D4B2A62198800B2D13B /* Extensions.swift */; };
+		ECF37D4F2A63CE6300B2D13B /* APIAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF37D4E2A63CE6300B2D13B /* APIAccess.swift */; };
+		ECF37D522A63D71500B2D13B /* CatMedias.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF37D512A63D71500B2D13B /* CatMedias.swift */; };
+		ECF37D552A63E08000B2D13B /* CatsCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF37D542A63E08000B2D13B /* CatsCollectionViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		ECF37D462A6217C900B2D13B /* CatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCell.swift; sourceTree = "<group>"; };
 		ECF37D492A6218C100B2D13B /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		ECF37D4B2A62198800B2D13B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		ECF37D4E2A63CE6300B2D13B /* APIAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIAccess.swift; sourceTree = "<group>"; };
+		ECF37D512A63D71500B2D13B /* CatMedias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatMedias.swift; sourceTree = "<group>"; };
+		ECF37D542A63E08000B2D13B /* CatsCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsCollectionViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,9 @@
 		ECF37D2D2A6213A200B2D13B /* ImgurAPI */ = {
 			isa = PBXGroup;
 			children = (
+				ECF37D532A63E05800B2D13B /* ViewModels */,
+				ECF37D502A63D5F000B2D13B /* Models */,
+				ECF37D4D2A63CE4800B2D13B /* Network */,
 				ECF37D482A6218B800B2D13B /* Utils */,
 				ECF37D452A62179800B2D13B /* Views */,
 				ECF37D422A62155D00B2D13B /* Controllers */,
@@ -101,6 +110,30 @@
 				ECF37D4B2A62198800B2D13B /* Extensions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		ECF37D4D2A63CE4800B2D13B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				ECF37D4E2A63CE6300B2D13B /* APIAccess.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		ECF37D502A63D5F000B2D13B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ECF37D512A63D71500B2D13B /* CatMedias.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ECF37D532A63E05800B2D13B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				ECF37D542A63E08000B2D13B /* CatsCollectionViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,11 +208,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECF37D332A6213A200B2D13B /* ViewController.swift in Sources */,
+				ECF37D522A63D71500B2D13B /* CatMedias.swift in Sources */,
 				ECF37D2F2A6213A200B2D13B /* AppDelegate.swift in Sources */,
 				ECF37D312A6213A200B2D13B /* SceneDelegate.swift in Sources */,
 				ECF37D4A2A6218C100B2D13B /* Protocols.swift in Sources */,
 				ECF37D472A6217C900B2D13B /* CatCell.swift in Sources */,
 				ECF37D442A62158500B2D13B /* CatsCollectionViewController.swift in Sources */,
+				ECF37D552A63E08000B2D13B /* CatsCollectionViewModel.swift in Sources */,
+				ECF37D4F2A63CE6300B2D13B /* APIAccess.swift in Sources */,
 				ECF37D4C2A62198800B2D13B /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
