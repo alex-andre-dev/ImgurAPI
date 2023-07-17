@@ -8,10 +8,13 @@
 import UIKit
 
 class CatsCollectionViewModel {
+   
+    //MARK: - Properties
     
     private let api = APIAccess.shared
 
     //MARK: - Helpers
+    
     func fetchData(completion: @escaping([CatImages]) -> Void) {
         api.posts { result in
             switch result {

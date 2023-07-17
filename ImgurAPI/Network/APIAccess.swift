@@ -4,6 +4,7 @@
 //
 //  Created by Alexandre  Machado on 16/07/23.
 //
+
 import Foundation
 
 class APIAccess {
@@ -11,7 +12,6 @@ class APIAccess {
     enum NetworkError: Error {
         case badResponse(URLResponse?)
         case badData
-        case badLocalUrl
     }
     
     static var shared = APIAccess()

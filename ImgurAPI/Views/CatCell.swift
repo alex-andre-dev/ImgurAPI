@@ -1,5 +1,5 @@
 //
-//  CatsCell.swift
+//  CatCell.swift
 //  ImgurAPI
 //
 //  Created by Alexandre  Machado on 14/07/23.

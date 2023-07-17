@@ -12,11 +12,13 @@ private let reuseIdentifier = "Cell"
 class CatsCollectionViewController: UICollectionViewController {
     
     //MARK: - Properties
+    
     private var viewModel: CatsCollectionViewModel
     private var catImages: [CatImage] = []
     
     
     //MARK: - Initializers
+    
     init(collectionViewLayout layout: UICollectionViewLayout, viewModel: CatsCollectionViewModel) {
         self.viewModel = viewModel
         super.init(collectionViewLayout: layout)
@@ -33,6 +35,7 @@ class CatsCollectionViewController: UICollectionViewController {
         collectionView.register(CatCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         fetchCatMedias()
     }
+    
     //MARK: - Helpers
     
     private func fetchCatMedias() {
