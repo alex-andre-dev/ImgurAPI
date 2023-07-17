@@ -6,26 +6,29 @@
 //
 
 import UIKit
+import SDWebImage
 
 class CatCell: UICollectionViewCell {
     
     //MARK: - Properties
     
-    private let placeholderLabel: UILabel = {
+    var representedIndentifier: String = ""
+    
+    public let placeholderLabel: UILabel = {
         let label = UILabel()
-        label.textColor = UIColor.gray
+        label.textColor = UIColor.darkGray
         label.numberOfLines = 0
         return label
     }()
     
-    private let CatImageView: UIImageView = {
+    public let catImageView: UIImageView = {
         let iv = UIImageView()
-        iv.contentMode = .scaleAspectFill
+        iv.contentMode = .scaleToFill
         return iv
     }()
-
+    
     //MARK: - Lifecycle
-
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -34,8 +37,27 @@ class CatCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    //MARK: - Helpers
+    
+    func loadImages(data: Data?) {
+        if let data = data {
+            catImageView.image = UIImage(data: data)
+            placeholderLabel.isHidden = true
+            layer.borderWidth = 0
+        }
+    }
+    
+    
+    func loadMedias(media: CatImage?){
+        if let media = media {
+            if let url = URL(string: media.link){
+                catImageView.sd_setImage(with: url, completed: nil)
+            }
+        }
+    }
 }
-
+    //MARK: - ViewProtocol
 extension CatCell: ViewProtocol {
     func setupUI() {
         placeholderLabel.text = "Imgur \nCat \npic"
@@ -45,12 +67,13 @@ extension CatCell: ViewProtocol {
     
     func setupHierarchy() {
         addSubview(placeholderLabel)
-        addSubview(CatImageView)
+        addSubview(catImageView)
+
     }
     
     func setupConstraints() {
         placeholderLabel.fillEntireView(view: self, padding: .init(top: 10, left: 20, bottom: 20, right: 10))
-        CatImageView.fillEntireView(view: self)
+        catImageView.fillEntireView(view: self)
     }
     
     

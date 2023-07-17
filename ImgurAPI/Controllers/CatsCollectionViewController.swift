@@ -11,8 +11,9 @@ private let reuseIdentifier = "Cell"
 
 class CatsCollectionViewController: UICollectionViewController {
     
-    //MARK: - ViewModel
+    //MARK: - Properties
     private var viewModel: CatsCollectionViewModel
+    private var catImages: [CatImage] = []
     
     
     //MARK: - Initializers
@@ -35,10 +36,16 @@ class CatsCollectionViewController: UICollectionViewController {
     //MARK: - Helpers
     
     private func fetchCatMedias() {
-        viewModel.fetchData { [weak self] in
-            DispatchQueue.main.async {
-                self?.collectionView.backgroundColor = .red
-                print("foi")
+        viewModel.fetchData { [weak self] data in
+                for images in data {
+                    for image in images.images{
+                        if image.type == .imageJPEG || image.type == .imagePNG{
+                        self?.catImages.append(image)
+                        }
+                    }
+                }
+            DispatchQueue.main.async() {
+                self?.collectionView.reloadData()
             }
         }
     }
@@ -46,11 +53,17 @@ class CatsCollectionViewController: UICollectionViewController {
     //MARK: - UICollectionViewDataSource
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 50
+        return catImages.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CatCell
+        cell.catImageView.image = nil
+        let representedIndentfier = catImages[indexPath.item].id
+        cell.representedIndentifier = representedIndentfier
+        if cell.representedIndentifier == representedIndentfier {
+        cell.loadMedias(media: catImages[indexPath.item])
+        }
         return cell
     }
     

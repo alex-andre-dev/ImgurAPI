@@ -9,15 +9,14 @@ import UIKit
 
 class CatsCollectionViewModel {
     
-    private var catImages: [CatImages] = []
-    private let api = APIAccess()
-    
+    private let api = APIAccess.shared
+
     //MARK: - Helpers
-    func fetchData(completion: @escaping() -> Void) {
-        api.fetchCatMedias { [weak self] result in
+    func fetchData(completion: @escaping([CatImages]) -> Void) {
+        api.posts { result in
             switch result {
             case .success(let mediaItems):
-                self?.catImages = mediaItems
+                completion(mediaItems)
             case .failure(let error):
                 print(error)
             }
