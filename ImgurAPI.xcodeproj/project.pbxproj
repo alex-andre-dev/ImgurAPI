@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC76D4B52A65D4E100B3A90C /* ImgurAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC76D4B42A65D4E100B3A90C /* ImgurAPITests.swift */; };
 		ECF37D2F2A6213A200B2D13B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF37D2E2A6213A200B2D13B /* AppDelegate.swift */; };
 		ECF37D312A6213A200B2D13B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF37D302A6213A200B2D13B /* SceneDelegate.swift */; };
 		ECF37D332A6213A200B2D13B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF37D322A6213A200B2D13B /* ViewController.swift */; };
@@ -23,7 +24,19 @@
 		ECF37D582A64975F00B2D13B /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = ECF37D572A64975F00B2D13B /* SDWebImage */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		EC76D4B62A65D4E100B3A90C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECF37D232A6213A200B2D13B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECF37D2A2A6213A200B2D13B;
+			remoteInfo = ImgurAPI;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		EC76D4B22A65D4E100B3A90C /* ImgurAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImgurAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC76D4B42A65D4E100B3A90C /* ImgurAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImgurAPITests.swift; sourceTree = "<group>"; };
 		ECF37D2B2A6213A200B2D13B /* ImgurAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImgurAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECF37D2E2A6213A200B2D13B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ECF37D302A6213A200B2D13B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +55,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EC76D4AF2A65D4E100B3A90C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECF37D282A6213A200B2D13B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,10 +73,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EC76D4B32A65D4E100B3A90C /* ImgurAPITests */ = {
+			isa = PBXGroup;
+			children = (
+				EC76D4B42A65D4E100B3A90C /* ImgurAPITests.swift */,
+			);
+			path = ImgurAPITests;
+			sourceTree = "<group>";
+		};
 		ECF37D222A6213A200B2D13B = {
 			isa = PBXGroup;
 			children = (
 				ECF37D2D2A6213A200B2D13B /* ImgurAPI */,
+				EC76D4B32A65D4E100B3A90C /* ImgurAPITests */,
 				ECF37D2C2A6213A200B2D13B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				ECF37D2B2A6213A200B2D13B /* ImgurAPI.app */,
+				EC76D4B22A65D4E100B3A90C /* ImgurAPITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,6 +171,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EC76D4B12A65D4E100B3A90C /* ImgurAPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC76D4BA2A65D4E100B3A90C /* Build configuration list for PBXNativeTarget "ImgurAPITests" */;
+			buildPhases = (
+				EC76D4AE2A65D4E100B3A90C /* Sources */,
+				EC76D4AF2A65D4E100B3A90C /* Frameworks */,
+				EC76D4B02A65D4E100B3A90C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC76D4B72A65D4E100B3A90C /* PBXTargetDependency */,
+			);
+			name = ImgurAPITests;
+			productName = ImgurAPITests;
+			productReference = EC76D4B22A65D4E100B3A90C /* ImgurAPITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		ECF37D2A2A6213A200B2D13B /* ImgurAPI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECF37D3F2A6213A300B2D13B /* Build configuration list for PBXNativeTarget "ImgurAPI" */;
@@ -171,6 +219,10 @@
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
+					EC76D4B12A65D4E100B3A90C = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = ECF37D2A2A6213A200B2D13B;
+					};
 					ECF37D2A2A6213A200B2D13B = {
 						CreatedOnToolsVersion = 13.0;
 					};
@@ -193,11 +245,19 @@
 			projectRoot = "";
 			targets = (
 				ECF37D2A2A6213A200B2D13B /* ImgurAPI */,
+				EC76D4B12A65D4E100B3A90C /* ImgurAPITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EC76D4B02A65D4E100B3A90C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECF37D292A6213A200B2D13B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -211,6 +271,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EC76D4AE2A65D4E100B3A90C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC76D4B52A65D4E100B3A90C /* ImgurAPITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		ECF37D272A6213A200B2D13B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,6 +297,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC76D4B72A65D4E100B3A90C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECF37D2A2A6213A200B2D13B /* ImgurAPI */;
+			targetProxy = EC76D4B62A65D4E100B3A90C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		ECF37D342A6213A200B2D13B /* Main.storyboard */ = {
@@ -250,6 +326,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EC76D4B82A65D4E100B3A90C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AQ8G69GT7J;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AlexAndre.ImgurAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImgurAPI.app/ImgurAPI";
+			};
+			name = Debug;
+		};
+		EC76D4B92A65D4E100B3A90C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AQ8G69GT7J;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AlexAndre.ImgurAPITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImgurAPI.app/ImgurAPI";
+			};
+			name = Release;
+		};
 		ECF37D3D2A6213A300B2D13B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -425,6 +547,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EC76D4BA2A65D4E100B3A90C /* Build configuration list for PBXNativeTarget "ImgurAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC76D4B82A65D4E100B3A90C /* Debug */,
+				EC76D4B92A65D4E100B3A90C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		ECF37D262A6213A200B2D13B /* Build configuration list for PBXProject "ImgurAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
